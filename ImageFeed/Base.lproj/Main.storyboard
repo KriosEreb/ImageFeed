@@ -150,6 +150,9 @@
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="7Zx-zw-O5B"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="iiI-ja-Enw"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8Pi-SF-vRT" id="beA-qW-ypt"/>
+                                </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o7-lA-6wh">
                                 <rect key="frame" x="8" y="67" width="48" height="48"/>
@@ -163,21 +166,36 @@
                                     <action selector="didTapBackButton" destination="8Pi-SF-vRT" eventType="touchUpInside" id="JSm-bh-ndY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXG-6o-HyR">
+                                <rect key="frame" x="171.66666666666666" y="751" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="W44-qm-heU"/>
+                                    <constraint firstAttribute="height" constant="50" id="kxx-bQ-3H3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Sharing"/>
+                                <connections>
+                                    <action selector="didTapShareButton:" destination="8Pi-SF-vRT" eventType="touchUpInside" id="UYB-mp-QnR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TT1-Cr-o7w"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
+                            <constraint firstItem="nXG-6o-HyR" firstAttribute="centerX" secondItem="ZWd-Yg-YH8" secondAttribute="centerX" id="5vm-Ga-A13"/>
                             <constraint firstItem="8o7-lA-6wh" firstAttribute="top" secondItem="TT1-Cr-o7w" secondAttribute="top" constant="8" id="FCg-7b-cLv"/>
-                            <constraint firstItem="H04-nX-Yqd" firstAttribute="leading" secondItem="TT1-Cr-o7w" secondAttribute="leading" id="L2e-yf-OA8"/>
-                            <constraint firstItem="H04-nX-Yqd" firstAttribute="bottom" secondItem="TT1-Cr-o7w" secondAttribute="bottom" id="hW7-T8-g6l"/>
-                            <constraint firstItem="H04-nX-Yqd" firstAttribute="top" secondItem="TT1-Cr-o7w" secondAttribute="top" id="qXh-vE-HgW"/>
+                            <constraint firstItem="H04-nX-Yqd" firstAttribute="leading" secondItem="ZWd-Yg-YH8" secondAttribute="leading" id="L2e-yf-OA8"/>
+                            <constraint firstItem="nXG-6o-HyR" firstAttribute="bottom" secondItem="TT1-Cr-o7w" secondAttribute="bottom" constant="-17" id="cKs-bq-b78"/>
+                            <constraint firstItem="H04-nX-Yqd" firstAttribute="bottom" secondItem="ZWd-Yg-YH8" secondAttribute="bottom" id="hW7-T8-g6l"/>
+                            <constraint firstItem="H04-nX-Yqd" firstAttribute="top" secondItem="ZWd-Yg-YH8" secondAttribute="top" id="qXh-vE-HgW"/>
                             <constraint firstItem="8o7-lA-6wh" firstAttribute="leading" secondItem="TT1-Cr-o7w" secondAttribute="leading" constant="8" id="sBS-5k-pcP"/>
-                            <constraint firstItem="H04-nX-Yqd" firstAttribute="trailing" secondItem="TT1-Cr-o7w" secondAttribute="trailing" id="x1p-Lv-rf6"/>
+                            <constraint firstItem="H04-nX-Yqd" firstAttribute="trailing" secondItem="ZWd-Yg-YH8" secondAttribute="trailing" id="x1p-Lv-rf6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nXP-YW-O1R"/>
                     <connections>
                         <outlet property="imageView" destination="cRb-ps-XEk" id="JWo-Sb-rCR"/>
+                        <outlet property="scrollView" destination="H04-nX-Yqd" id="rxf-ty-gCm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAW-5c-A17" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -270,6 +288,7 @@
         <image name="Main Active" width="30" height="30"/>
         <image name="Photo" width="70" height="70"/>
         <image name="Profile Active" width="30" height="30"/>
+        <image name="Sharing" width="50" height="50"/>
         <namedColor name="YP Background">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
