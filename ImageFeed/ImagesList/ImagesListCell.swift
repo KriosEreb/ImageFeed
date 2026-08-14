@@ -11,7 +11,7 @@ import UIKit
 final class ImagesListCell: UITableViewCell {
     static let reuseIdentifier: String = "ImagesListCell"
     
-    @IBOutlet private weak var cellImage: UIImageView!
+    @IBOutlet private weak var cellImageView: UIImageView!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var gradientView: UIView!
     @IBOutlet private weak var likeButton: UIButton!
@@ -49,10 +49,10 @@ final class ImagesListCell: UITableViewCell {
     }
 
     func configure(with image: UIImage, date: String, isLiked: Bool) {
-        cellImage.image = image
+        cellImageView.image = image
         dateLabel.text = date
 
-        let likeImageName = isLiked ? "Active" : "No Active"
+        let likeImageName = isLiked ? "Like Active" : "Like No Active"
         likeButton.setImage(UIImage(named: likeImageName), for: .normal)
     }
 }
