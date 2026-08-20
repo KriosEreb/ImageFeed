@@ -342,7 +342,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="a6j-pF-aEY" kind="presentation" identifier="ShowAuthenticationScreen" id="t6F-a7-CAb"/>
+                        <segue destination="a6j-pF-aEY" kind="presentation" identifier="ShowAuthenticationScreen" modalPresentationStyle="fullScreen" id="t6F-a7-CAb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5I-i9-ZgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
