@@ -8,6 +8,10 @@
 import UIKit
 import WebKit
 
+enum WebViewConstants {
+    static let unsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
+}
+
 protocol WebViewViewControllerDelegate: AnyObject {
     func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String)
     func webViewViewControllerDidCancel(_ vc: WebViewViewController)
@@ -22,6 +26,7 @@ final class WebViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         webView.navigationDelegate = self
         
         loadAuthView()
@@ -37,6 +42,7 @@ final class WebViewViewController: UIViewController {
             options: .new,
             context: nil
         )
+        updateProgress()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -117,8 +123,6 @@ extension WebViewViewController: WKNavigationDelegate {
     }
 }
 
-enum WebViewConstants {
-    static let unsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
-}
+
 
 
