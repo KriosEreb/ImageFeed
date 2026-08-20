@@ -79,18 +79,28 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Tc-Cj-8RP">
+                                <rect key="frame" x="0.0" y="172" width="393" height="4"/>
+                                <color key="progressTintColor" name="YP Black"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0wm-jQ-42T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Xq8-9c-Je4" firstAttribute="top" secondItem="0wm-jQ-42T" secondAttribute="top" id="0ju-qL-nVe"/>
+                            <constraint firstItem="1Tc-Cj-8RP" firstAttribute="top" secondItem="0wm-jQ-42T" secondAttribute="top" id="7UF-dr-NdV"/>
+                            <constraint firstItem="1Tc-Cj-8RP" firstAttribute="leading" secondItem="0wm-jQ-42T" secondAttribute="leading" id="QPX-3F-n37"/>
                             <constraint firstItem="Xq8-9c-Je4" firstAttribute="bottom" secondItem="pvv-Cl-lak" secondAttribute="bottom" id="R0f-4d-eXN"/>
                             <constraint firstItem="Xq8-9c-Je4" firstAttribute="leading" secondItem="pvv-Cl-lak" secondAttribute="leading" id="Sof-aB-Ngw"/>
                             <constraint firstItem="Xq8-9c-Je4" firstAttribute="trailing" secondItem="pvv-Cl-lak" secondAttribute="trailing" id="qc0-61-RxD"/>
+                            <constraint firstItem="1Tc-Cj-8RP" firstAttribute="trailing" secondItem="0wm-jQ-42T" secondAttribute="trailing" id="zag-e4-PeX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="w4N-GY-Qvh"/>
+                    <navigationItem key="navigationItem" id="w4N-GY-Qvh">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="progressView" destination="1Tc-Cj-8RP" id="20k-FE-62i"/>
                         <outlet property="webView" destination="Xq8-9c-Je4" id="C1Y-lW-ILh"/>
                     </connections>
                 </viewController>
